@@ -1,0 +1,21 @@
+{
+  "name": "touchfish",
+  "version": "1.0.0",
+  "description": "打工人摸鱼进度小程序",
+  "main": "app.js",
+  "scripts": {
+    "dev": "微信开发者工具",
+    "build": "微信开发者工具构建"
+  },
+  "dependencies": {
+    "@vant/weapp": "^1.11.7"
+  },
+  "keywords": [
+    "微信小程序",
+    "摸鱼",
+    "进度管理",
+    "vant"
+  ],
+  "author": "touchfish-team",
+  "license": "MIT"
+}

@@ -1,0 +1,218 @@
+/* 页面容器 */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  padding: 20rpx;
+}
+
+/* 顶部标题区域 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  margin-bottom: 20rpx;
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 32rpx rgba(139, 92, 246, 0.3);
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 日历容器 */
+.calendar-container {
+  background: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+  height: 60vh;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+  padding: 0 20rpx;
+}
+
+.month-year {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #374151;
+}
+
+.calendar-grid {
+  height: calc(100% - 80rpx);
+}
+
+.weekdays {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.weekday {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 60rpx);
+}
+
+.day {
+  width: calc(100% / 7);
+  height: calc((100% - 30rpx) / 6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 5rpx;
+}
+
+.day-number {
+  font-size: 24rpx;
+  color: #374151;
+  margin-bottom: 8rpx;
+  z-index: 2;
+}
+
+.other-month .day-number {
+  color: #D1D5DB;
+}
+
+.progress-circle {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F3F4F6;
+}
+
+.progress-fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #8B5CF6 0deg, #A855F7 0deg, #E5E7EB 0deg);
+}
+
+.progress-text {
+  font-size: 18rpx;
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.3);
+}
+
+/* 摸鱼按钮 */
+.fish-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+
+.fish-button {
+  width: 200rpx !important;
+  height: 200rpx !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%) !important;
+  border: none !important;
+  box-shadow: 0 12rpx 40rpx rgba(139, 92, 246, 0.4), 
+              0 4rpx 12rpx rgba(139, 92, 246, 0.3) !important;
+  font-size: 60rpx !important;
+  font-weight: bold !important;
+  color: white !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.fish-button:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 8rpx 30rpx rgba(139, 92, 246, 0.3) !important;
+}
+
+/* 弹窗样式 */
+.goal-popup {
+  width: 600rpx;
+  padding: 40rpx;
+  background: white;
+  border-radius: 20rpx;
+}
+
+.popup-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.slider-container {
+  margin-bottom: 40rpx;
+}
+
+.slider-label {
+  font-size: 28rpx;
+  color: #6B7280;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 20rpx;
+}
+
+.popup-button {
+  flex: 1 !important;
+  height: 80rpx !important;
+  border-radius: 40rpx !important;
+  font-size: 28rpx !important;
+}
+
+.popup-button.cancel {
+  background: #F3F4F6 !important;
+  color: #6B7280 !important;
+  border: none !important;
+}
+
+.popup-button.confirm {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%) !important;
+  border: none !important;
+}
+
+/* Vant 组件样式覆盖 */
+.van-button--primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%) !important;
+  border: none !important;
+}
+
+.van-slider__bar {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%) !important;
+}
+
+.van-slider__button {
+  background: #8B5CF6 !important;
+  border: 2rpx solid white !important;
+  box-shadow: 0 2rpx 8rpx rgba(139, 92, 246, 0.3) !important;
+} 
