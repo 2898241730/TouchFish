@@ -53,21 +53,18 @@ Page({
     
     const calendarDays = [];
     
-    // 添加上个月的日期
-    const prevMonth = currentMonth === 1 ? 12 : currentMonth - 1;
-    const prevYear = currentMonth === 1 ? currentYear - 1 : currentYear;
-    const prevMonthLastDay = new Date(prevYear, prevMonth, 0).getDate();
-    
-    for (let i = startWeekday - 1; i >= 0; i--) {
+    // 添加空白占位符（上个月的位置）
+    for (let i = 0; i < startWeekday; i++) {
       calendarDays.push({
-        day: prevMonthLastDay - i,
+        day: '',
         isCurrentMonth: false,
         progress: -1,
-        hours: 0
+        hours: 0,
+        isEmpty: true
       });
     }
     
-    // 添加当前月的日期
+    // 只添加当前月的日期
     for (let day = 1; day <= daysInMonth; day++) {
       const dateKey = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
       const hours = fishingRecords[dateKey] || 0;
@@ -77,20 +74,8 @@ Page({
         day,
         isCurrentMonth: true,
         progress,
-        hours: hours.toFixed(1)
-      });
-    }
-    
-    // 添加下个月的日期
-    const totalCells = 42; // 6行 × 7列
-    const remainingCells = totalCells - calendarDays.length;
-    
-    for (let day = 1; day <= remainingCells; day++) {
-      calendarDays.push({
-        day,
-        isCurrentMonth: false,
-        progress: -1,
-        hours: 0
+        hours: hours.toFixed(1),
+        isEmpty: false
       });
     }
     
