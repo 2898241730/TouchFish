@@ -27,10 +27,17 @@
       </view>
 
       <view class="days">
-        <view class="day {{item.isCurrentMonth ? 'current-month' : 'other-month'}}" wx:for="{{calendarDays}}" wx:key="index">
-          <view class="day-number">{{item.day}}</view>
-          <view class="progress-circle" wx:if="{{item.isCurrentMonth && item.progress >= 0}}">
-            <view class="progress-fill" style="background: conic-gradient(from 0deg, #8B5CF6 0deg, #A855F7 {{item.progress * 3.6}}deg, #E5E7EB {{item.progress * 3.6}}deg)"></view>
+        <view 
+          class="day {{item.isCurrentMonth ? 'current-month' : 'other-month'}}" 
+          wx:for="{{calendarDays}}" 
+          wx:key="index"
+        >
+          <view class="day-number" wx:if="{{!item.isEmpty}}">{{item.day}}</view>
+          <view class="progress-circle" wx:if="{{item.isCurrentMonth && item.progress >= 0 && !item.isEmpty}}">
+            <view 
+              class="progress-fill" 
+              style="background: conic-gradient(from 0deg, #8B5CF6 0deg, #A855F7 {{item.progress * 3.6}}deg, #E5E7EB {{item.progress * 3.6}}deg)"
+            ></view>
             <view class="progress-text">{{item.hours}}h</view>
           </view>
         </view>
