@@ -5,7 +5,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#8B5CF6",
-    "navigationBarTitleText": "摸鱼进度",
+    "navigationBarTitleText": "摸鱼记录器",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#F8FAFC"
   },
@@ -16,6 +16,7 @@
     "van-popup": "@vant/weapp/popup/index",
     "van-slider": "@vant/weapp/slider/index",
     "van-icon": "@vant/weapp/icon/index",
-    "van-toast": "@vant/weapp/toast/index"
+    "van-toast": "@vant/weapp/toast/index",
+    "van-calendar": "@vant/weapp/calendar/index"
   }
 } 
